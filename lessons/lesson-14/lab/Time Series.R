@@ -1,12 +1,8 @@
 install.packages('fpp')
 install.packages('forecast')
 
-
-
 library('forecast')
 library('fpp')
-
-
 
 
 # Time Series Components
@@ -17,6 +13,8 @@ plot(elecequip, col="gray",
      main="Electrical equipment manufacturing",
      ylab="New orders index", xlab="")
 lines(fit$time.series[,2],col="red",ylab="Trend")
+
+
 
 # Exponential Smoothing Model
 fit1 <- ses(oil, alpha=0.2, initial="simple", h=3)
